@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection1_1</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <style>
+        body {
+            background-image: url('../../images/瓶子日记部分1/瓶子日记部分首页背景.png');
+        }
+
+        .header {
+            width: 100%;
+            height:10vh;
+            /* background-color: rgb(255, 206, 149); */
+            font-size: 25px;
+            line-height: 7vh;
+            /* font-style: italic; */
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .main_content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main_content .left_con {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+
+        .main_content .left_con .title {
+            width: 100%;
+            /* margin-top: 2%; */
+            margin-bottom: 10px;
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .main_content .l_sangle {
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-right: 40px solid rgb(255, 220, 132);
+            border-bottom: 40px solid transparent;
+            margin-right: 30px;
+            
+        }
+
+        .main_content .r_sangle {
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-left: 40px solid rgb(255, 220, 132);
+            border-bottom: 40px solid transparent;
+            margin-left: 30px;
+        }
+
+        .main_content .content {
+            margin-top: 40px;
+            width:70%;
+            border: 6px solid rgb(221, 239, 229);
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .content .img1,
+        .content .img2,
+        .content .img3 {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .content .img1 img,
+        .content .img2 img,
+        .content .img3 img {
+            width: 100%;
+        }
+
+        .main_content .right_con {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .right_con img{
+          width: 32.5vw;
+        }
+
+        .right_con .inner_box {
+            width: 60%;
+            height: 80vh;
+            border: 6px solid rgb(221, 239, 229);
+            border-radius: 10px;
+            /* margin-top: 20px; */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .inner_box .img1 {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .inner_box .img1 img {
+            width:10.7vw;
+        }
+
+        .inner_box .img2 img {
+            width: 24vw;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <ul id="Menu">
+            <li>
+                <a href="../home/home.html">Home</a>
+            </li>
+            <li>
+                <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+            </li>
+            <li>
+                <a href="../game/game1.html">Game</a>
+            </li>
+            <li class="active">
+                <a href="../collection/collection1.html">Collection</a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">Profile</a>
+            </li>
+        </ul>
+    </header>
+    <main class="main_content">
+        <div class="left_con">
+            <div class="title">
+                These are the stresses you've dealt with
+            </div>
+            <div class="l_sangle"></div>
+            <div class="content" id="con_img">
+                <div class="img1">
+                    <img src="../../images/收集部分/瓶子1.png" alt="">
+                </div>
+                <div class="img2">
+                    <img src="../../images/收集部分/瓶子2.png" alt="">
+                </div>
+                <div class="img3">
+                    <img src="../../images/收集部分/瓶子3.png" alt="">
+                </div>
+            </div>
+            <div class="r_sangle"></div>
+        </div>
+        <div class="right_con">
+          <img class="imgUrl" src="../../images/收集部分/图片2.png" alt="">
+            <!-- <div class="inner_box">
+                <div class="img1">
+                    <img src="../../images/收集部分/瓶子1.png" alt="瓶子" id="img_inc">
+                </div>
+                <div class="img2">
+                    <img src="../../images/收集部分/瓶子下面的描述.png" alt="瓶子描述" id="img_dec">
+                </div>
+            </div> -->
+        </div>
+    </main>
+</body>
+<script>
+    window.onload = function(){
+      function getQueryVariable(variable){
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+      }
+      
+      let imgUrlId = getQueryVariable("id")
+      let urlArr = [
+      "../../images/收集部分/图片2.png",
+      "../../images/收集部分/图片3.png",
+      "../../images/收集部分/图片4.png",
+      ]
+      let img = document.getElementsByClassName('imgUrl')[0]
+      img.src = urlArr[imgUrlId]
+
+      let imgs = document.getElementById('con_img').getElementsByTagName('img')
+      for (let i = 0; i < imgs.length; i++) {
+          imgs[i].onclick = function () {
+            img.src = urlArr[i]
+
+          }
+      }
+    }
+
+</script>
+
+</html>

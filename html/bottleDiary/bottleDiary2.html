@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bottleDiary2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../css/bottleDiary2.css">
+    <style>
+      .header {
+            width: 100%;
+            /* background-color: rgb(255, 206, 149); */
+            font-size:25px;
+            line-height: 7vh;
+            /* font-style: italic; */
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        ul,
+        ol,
+        li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+         font-family: "微软雅黑";
+          text-decoration: none;
+          color: #000;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <div class="main">
+    <header class="header">
+      <ul id="Menu">
+          <li>
+              <a href="../home/home.html">Home</a>
+          </li>
+          <li class="isActive_link">
+              <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+          </li>
+          <li>
+              <a href="../game/game1.html">Game</a>
+          </li>
+          <li>
+              <a href="../collection/collection1.html">Collection</a>
+          </li>
+          <li>
+              <a href="../profile/profile.html">Profile</a>
+          </li>
+      </ul>
+  </header>
+    <div class="body">
+      
+      <div class="back">
+        <a href="./bottleDiary1.html">
+          <img src="../../images/瓶子日记部分1/back.png" alt="">
+        </a>
+      </div>
+      <div class="body_left">
+        <p class="title">Design your bottle</p>
+        <div class="content">
+          <div class="img_box">
+            <img class="img1" src="../../images/瓶子日记部分1/瓶子2.png" alt="">
+            <img class="img2" src="../../images/瓶子日记部分1/瓶子3.png" alt="">
+            <img class="img3" src="../../images/瓶子日记部分1/瓶子4.png" alt="">
+          </div>
+          <img class="img4" src="../../images/瓶子日记部分1/Group 6832.png" alt="">
+          <img class="img5" src="../../images/瓶子日记部分1/Group 6968.png" alt="">
+          <img class="img6" src="../../images/瓶子日记部分1/Group 7009.png" alt="">
+          <div class="color_box">
+            <div style="background-color: rgb(171,203,255);"></div>
+            <div style="background-color: rgb(199,218,132);"></div>
+            <div style="background-color: rgb(255,186,186);"></div>
+            <div style="background-color: rgb(249,174,253);"></div>
+            <div style="background-color: rgb(160,220,210);"></div>
+            <div style="background-color: rgb(137,199,187);"></div>
+            <div style="background-color: rgb(199,229,1);"></div>
+            <div style="background-color: rgb(166,178,203);"></div>
+          </div>
+        </div>
+      </div>
+      <div class="body_right">
+        <div class="bottle_imgBox">
+          <img class="colorImg" style="width: 7vw" src="../../images/瓶子日记部分1/2.png" alt="">
+        </div>
+        <div class="float_box">
+          <div>
+            <img src="../../images/瓶子日记部分1/Group 6970.png" alt="">
+          </div>
+          <textarea class="textarea" style="overflow-y:hidden" rows="3" cols="57"></textarea>
+          <input class="line4" type="text">
+          <div class="text_info">text</div>
+          <div class="btn_box">
+            <div style="background-color: rgb(255,115,115);">
+              <span>one</span>
+            </div>
+            <div style="background-color: rgb(255,187,85);">
+              <span>two</span></div>
+            <div style="background-color: rgb(255,224,114);">
+              <span>three</span></div>
+            <div style="background-color: rgb(254,233,179);">
+              <span>four</span></div>
+          </div>
+        </div>
+        <div class="btn">
+          <a href="./bottleDiary3.html">Save it</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  
+  let imgs = document.getElementsByClassName('img_box')[0].getElementsByTagName('img')
+  for(let i = 0; i < imgs.length; i++){
+    imgs[i].onclick = function(){
+      for(let j = 0; j < imgs.length; j++){
+        imgs[j].style.transform = "scale(1)";
+      }
+      imgs[i].style.transform = "scale(1.2)";
+    }
+  }
+  
+  let colorBtns = document.getElementsByClassName('color_box')[0].getElementsByTagName('div')
+  for(let i = 0; i < colorBtns.length; i++){
+    colorBtns[i].onclick = function(){
+      for(let j = 0; j < colorBtns.length; j++){
+        colorBtns[j].style.width = '40px'
+        colorBtns[j].style.height = '40px'
+      }
+      document.getElementsByClassName('colorImg')[0].src = `../../images/瓶子日记部分2&与游戏部分共用/${i}.png`
+      colorBtns[i].style.width = '50px'
+      colorBtns[i].style.height = '50px'
+    }
+  }
+  
+  let Btns = document.getElementsByClassName('btn_box')[0].getElementsByTagName('div')
+  for(let i = 0; i < Btns.length; i++){
+    Btns[i].onclick = function(){
+      for(let j = 0; j < Btns.length; j++){
+        Btns[j].style.width = '70px'
+        Btns[j].style.height = '25px'
+      }
+      Btns[i].style.width = '80px'
+      Btns[i].style.height = '30px'
+    }
+  }
+  let text_info = document.querySelector('.text_info')
+  let textArr = [
+    "Such a really bad mood that couldn't focus on anything else",
+    "In a bad mood, but can get on with daily life",
+    "A little upset, sometimes still thinking about the stress",
+    "Peace of mind, forget stress "
+  ]
+  let spans = Btns
+  for (let i = 0; i < spans.length; i++) {
+        spans[i].onmouseleave = function(){
+            
+            text_info.style.opacity = '0'  
+        }
+        spans[i].onmouseenter = function(){
+            text_info.style.opacity = '1'
+            text_info.innerHTML = textArr[i]
+        }
+        spans[i].onclick = function(){
+          for (let i = 0; i < spans.length; i++) {
+            spans[i].style.transform = "scale(1)";
+          }
+          
+            spans[i].style.transform = "scale(1.2)";
+           
+        }
+     }
+
+</script>
+
+</html>

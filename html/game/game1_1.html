@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game1_1</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <style>
+        body {
+            background-image: url('../../images/瓶子日记部分1/瓶子日记部分首页背景.png');
+        }
+
+        .header {
+            width: 100%;
+            /* background-color: rgb(255, 206, 149); */
+            font-size:25px;
+            line-height: 7vh;
+            /* font-style: italic; */
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .main_content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main_content .left_con {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+
+
+        .main_content .left_con .title {
+            width: 100%;
+            /* margin-top: 6%; */
+            margin-bottom: 20px;
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+       
+        .main_content .l_sangle {
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-right: 40px solid rgb(255, 220, 132);
+            border-bottom: 40px solid transparent;
+            margin-right: 40px;
+            
+        }
+
+        .main_content .r_sangle {
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-left: 40px solid rgb(255, 220, 132);
+            border-bottom: 40px solid transparent;
+            margin-left: 30px;
+        }
+        .main_content .content {
+            margin-top: 20px;
+            width:70%;
+            /* height: 32.4vh; */
+            border: 6px solid rgb(221, 239, 229);
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .content .img1,
+        .content .img2,
+        .content .img3 {
+            display: flex;
+            justify-content: flex-end;
+            /* height: 32vh; */
+        }
+
+        .content .img1 img,
+        .content .img2 img,
+        .content .img3 img {
+            width:100%;
+        }
+
+        .main_content .right_con {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3%;
+        }
+
+        .right_con .inner_box {
+            width: 60%;
+            height: 80vh;
+            border: 6px solid rgb(221, 239, 229);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .inner_box .img1 {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .inner_box .img1 img {
+            width:10vw;
+        }
+
+        .inner_box .img2 img {
+            width: 22vw;
+            /* height: 100%; */
+        }
+
+        .inner_box .btn {
+            height: 50px;
+            width: 20vw;
+            border-radius: 80px;
+            line-height: 50px;
+            font-style: italic;
+            font-family: 'ABeeZee';
+            font-size: 20px;
+            text-align: center;
+            background-color: rgb(255, 206, 149);
+            margin-top: 10px;
+        }
+        .inner_box .dec{
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        }
+        .inner_box .color_box {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        span {
+            display: inline-block;
+            height: 36px;
+            width: 80px;
+            border-radius: 9px;
+            margin: 0 5px;
+            transform: scale(1);
+            transition: transform 1s ease 0s;
+        }
+        .text_info{
+            background-color: rgb(255, 220, 132);
+            border-radius: 8px;
+            min-width: 350px;
+            line-height: 30px;
+            height: 30px;
+            color: #f8f8f8;
+            text-align: center;
+          opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <ul id="Menu">
+            <li>
+                <a href="../home/home.html">Home</a>
+            </li>
+            <li>
+                <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+            </li>
+            <li class="active">
+                <a href="../game/game1.html">Game</a>
+            </li>
+            <li>
+                <a href="../collection/collection1.html">Collection</a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">Profile</a>
+            </li>
+        </ul>
+    </header>
+    <main class="main_content">
+        <div class="left_con">
+            <div class="title">
+                Which stress do you want to break?
+            </div>
+            <div class="l_sangle"></div>
+            <div class="content">
+                <div class="img1">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子1.png" alt="">
+                </div>
+                <div class="img2">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子2.png" alt="">
+                </div>
+                <div class="img3">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子3.png" alt="">
+                </div>
+            </div>
+            <div class="r_sangle"></div>
+        </div>
+        <div class="right_con">
+            <div class="inner_box">
+                <div class="img1">
+                    <img class="bottleImg" src="../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子1.png" alt="">
+                </div>
+                <div class="img2">
+                    <img  class="decImg" src="../../images/瓶子日记部分2&与游戏部分共用/瓶子下面的描述.png" alt="">
+                </div>
+                <div class="btn">
+                    <a href="../game/game1_2.html">Choose the game</a>
+                </div>
+                <p class="dec">
+                    What level is your emotional state now
+                </p>
+                <div class="text_info">我是描述文字哈哈哈哈哈</div>
+                <div class="color_box" id="color_box">
+                    <span style="background-color:rgb(255, 115, 115);"></span>
+                    <span style="background-color:rgb(255, 187, 85)"></span>
+                    <span style="background-color:rgb(255, 224, 114)"></span>
+                    <span style="background-color:rgb(254, 233, 179)"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+  window.onload = function(){
+    let textArr = [
+    "Such a really bad mood that couldn't focus on anything else",
+    "In a bad mood, but can get on with daily life",
+    "A little upset, sometimes still thinking about the stress",
+    "Peace of mind, forget stress "
+  ]
+    let spans = document.getElementById('color_box').getElementsByTagName('span')
+    let text_info = document.querySelector('.text_info')
+    for (let i = 0; i < spans.length; i++) {
+        spans[i].onmouseleave = function(){
+            
+            text_info.style.opacity = '0'  
+        }
+        spans[i].onmouseenter = function(){
+            text_info.style.opacity = '1'
+            text_info.innerHTML = textArr[i]
+        }
+        spans[i].onclick = function(){
+          for (let i = 0; i < spans.length; i++) {
+            spans[i].style.transform = "scale(1)";
+          }
+          
+            spans[i].style.transform = "scale(1.2)";
+           
+        }
+     }
+
+
+      function getQueryVariable(variable){
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+      }
+      
+      let imgUrlId = getQueryVariable("id") || 0
+      let urlArr = [
+        "../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子1.png",
+        "../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子2.png",
+        "../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子3.png",
+      ]
+      let desArr = [
+        "../../images/瓶子日记部分2&与游戏部分共用/瓶子下面的描述.png",
+        "../../images/瓶子日记部分2&与游戏部分共用/图片A.png",
+        "../../images/瓶子日记部分2&与游戏部分共用/图片B.png",
+      ]
+      let img = document.getElementsByClassName('bottleImg')[0]
+      let decImg = document.getElementsByClassName('decImg')[0]
+      img.src = urlArr[imgUrlId]
+      decImg.src =desArr[imgUrlId]
+
+      let imgs = document.getElementsByClassName('content')[0].getElementsByTagName('img')
+      for (let i = 0; i < imgs.length; i++) {
+          imgs[i].onclick = function () {
+            img.src = urlArr[i]
+            decImg.src =desArr[i]
+            console.log(i);
+
+          }
+      }
+    }
+   
+
+    
+
+</script>
+
+</html>

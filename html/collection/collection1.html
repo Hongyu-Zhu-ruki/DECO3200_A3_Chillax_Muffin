@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection1</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <style>
+        body {
+            background-image: url('../../images/瓶子日记部分1/瓶子日记部分首页背景.png');
+        }
+
+        .header {
+            width: 100%;
+            height:7vh;
+            /* background-color: rgb(255, 206, 149); */
+            font-size: 25px;
+            line-height: 7vh;
+            /* font-style: italic; */
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .main_content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main_content .title {
+            width: 100%;
+            margin-top: 8%;
+            font-size: 40px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .main_content .l_sangle {
+            width: 0;
+            height: 0;
+            border-top: 80px solid transparent;
+            border-right: 80px solid rgb(255, 220, 132);
+            border-bottom: 80px solid transparent;
+            margin-right: 30px;
+            
+        }
+
+        .main_content .r_sangle {
+            width: 0;
+            height: 0;
+            border-top: 80px solid transparent;
+            border-left: 80px solid rgb(255, 220, 132);
+            border-bottom: 80px solid transparent;
+            margin-left: 30px;
+        }
+
+        .main_content .content {
+            margin-top: 40px;
+            width:70%;
+            height: 350px;
+            border: 6px solid rgb(221, 239, 229);
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .content .img1,
+        .content .img2,
+        .content .img3 {
+            display: flex;
+            align-items: flex-end;
+        }
+        
+        .content .img1 img,
+        .content .img2 img,
+        .content .img3 img {
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <ul id="Menu">
+            <li>
+                <a href="../home/home.html">Home</a>
+            </li>
+            <li>
+                <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+            </li>
+            <li>
+                <a href="../game/game1.html">Game</a>
+            </li>
+            <li class="active">
+                <a href="../collection/collection1.html">Collection</a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">Profile</a>
+            </li>
+        </ul>
+    </header>
+    <main class="main_content">
+        <div class="title">
+            These are the stresses you've dealt with
+        </div>
+        <div class="l_sangle"></div>
+        <div class="content">
+            <div class="img1">
+                <img src="../../images/收集部分/瓶子1.png" alt="">
+            </div>
+            <div class="img2">
+                <img src="../../images/收集部分/瓶子2.png" alt="">
+            </div>
+            <div class="img3">
+                <img src="../../images/收集部分/瓶子3.png" alt="">
+            </div>
+        </div>
+        <div class="r_sangle"></div>
+    </main>
+</body>
+<script>
+    
+    let imgs = document.getElementsByClassName('content')[0].getElementsByTagName('img')
+    for(let i = 0; i < imgs.length; i++){
+      imgs[i].onclick = function(){
+        location.href=`./collection1_1.html?id=${i}`
+      }
+    }
+
+</script>
+
+</html>

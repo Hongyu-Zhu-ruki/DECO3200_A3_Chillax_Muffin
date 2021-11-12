@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading App</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <style>
+        body {
+            background-color: rgb(255, 219, 163);
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .img_box {
+            height: 464px;
+            width: 819px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container .img_box img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img_box">
+            <img src="./images/网页logo.png" alt="欢迎页图片">
+        </div>
+    </div>
+</body>
+
+<script>
+    setTimeout("javascript:location.href='./html/login/index.html'", 3000);
+</script>
+
+
+</html>

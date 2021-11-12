@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game1_2</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <style>
+        body {
+            background-image: url('../../images/瓶子日记部分1/瓶子日记部分首页背景.png');
+        }
+
+        .header {
+            width: 100%;
+            line-height: 7vh;
+            /* background-color: rgb(255, 206, 149); */
+            font-size:25px;
+            /* font-style: italic; */
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .main_content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main_content .title {
+            width: 100%;
+            margin-top: 3%;
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 100px;
+        }
+
+        .main_content .btn_box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          
+        }
+
+        .btn_box .btn2,
+        .btn_box .btn1 {
+            position: relative;
+            width:40vw;
+            height: 10vh;
+            line-height:10vh;
+            background-color: rgb(255, 182, 140);
+            border-radius: 50px;
+            text-align: center;
+            margin: 15px 0;
+            font-size: 30px;
+        }
+
+        .btn_box .btn1 .icon1 {
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            z-index: -1;
+        }
+
+        .btn_box .btn2 .icon2 {
+            position: absolute;
+            bottom: -250px;
+            left: -150px;
+        }
+
+        .icon1 img,
+        .icon2 img {
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <ul id="Menu">
+            <li>
+                <a href="../home/home.html">Home</a>
+            </li>
+            <li>
+                <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+            </li>
+            <li class="active">
+                <a class="isActive_link" href="../game/game1.html">Game</a>
+            </li>
+            <li>
+                <a href="../collection/collection1.html">Collection</a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">Profile</a>
+            </li>
+        </ul>
+    </header>
+    <main class="main_content">
+        <div class="title">
+            Choose your game, enjoy and relax yourself!
+        </div>
+        <div class="btn_box">
+            <div class="btn1">
+              <a href="../../game2/index.html">Throw for Breaking</a>
+                <div class="icon1">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/Union2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="btn_box">
+            <div class="btn2">
+              <a href="../../game1/index.html">Falling Boomlet</a>
+                <div class="icon2">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/Union.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script>
+    
+
+</script>
+
+</html>

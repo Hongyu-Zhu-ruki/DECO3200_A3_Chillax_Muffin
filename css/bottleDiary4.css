@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.isActive_link {
+  border-bottom: sandybrown 3px solid;
+}
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(252, 243, 221);
+}
+
+.body {
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+}
+.back {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+.back img {
+  width: 90px;
+}
+.center {
+  width: 90vw;
+  margin-top: 50px;
+  /* display: flex; */
+}
+h1 {
+  font-size: 25px;
+}
+.main_content {
+  margin-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_content .title {
+  width: 100%;
+  margin-top: 5%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.main_content .l_sangle {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-right: 30px solid rgb(255, 220, 132);
+  border-bottom: 30px solid transparent;
+  margin-right: 15px;
+}
+
+.main_content .r_sangle {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-left: 30px solid rgb(255, 220, 132);
+  border-bottom: 30px solid transparent;
+  margin-left: 15px;
+}
+
+.main_content .content {
+  margin-top: 20px;
+  width: 80%;
+  height: 350px;
+  border: 6px solid rgb(221, 239, 229);
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.main_content .content img {
+  width: 10vw;
+}
+
+.main_footer {
+  display: inline-block;
+  text-align: left;
+  margin-top: 5%;
+  font-size: 25px;
+}
+
+.center_right {
+  position: relative;
+  width: 50%;
+  border: 6px solid rgb(221, 239, 229);
+  margin-bottom: 20px;
+  display: none;
+}
+.star {
+  position: relative;
+}
+.star_img {
+  width: 3vw;
+  margin-right: 7px;
+}
+.star_txt {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  font-weight: bolder;
+  display: none;
+}
+.bottle_img {
+  width: 10vw;
+}
+.describe img {
+  width: 27vw;
+}
+.center_right .describe {
+  margin-top: 20px;
+}
+.center_right .btn_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center_right .btn_box > p,
+.center_right .btn_box > a {
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: rgb(255, 206, 149);
+  padding: 10px;
+  margin: 5px;
+}
+.center_right .yellowImg_box {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+}
+.yellowImg_box img {
+  width: 31vw;
+}
+.anymore_box {
+  display: none;
+  position: relative;
+}
+.anymore_box_img {
+  border-radius: 10px;
+  /* width: 30.7vw; */
+}
+
+.anymore_btnBox {
+  position: absolute;
+  left: 10%;
+  bottom: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.anymore_btnBox > div {
+  width: 70px;
+  height: 25px;
+  border-radius: 5px;
+  margin: 10px;
+  color: rgba(0, 0, 0, 0);
+  line-height: 25px;
+}
+
+.line {
+  border: 0px solid;
+  width: 400px;
+  position: absolute;
+  left: 100px;
+  border-bottom: 1px solid rosybrown;
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 20px;
+}
+.line1 {
+  top: 300px;
+}
+.line2 {
+  top: 340px;
+}
+.save_btn {
+  margin-top: 3%;
+}
+.save_btn > a {
+  background-color: rgb(255, 206, 149);
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 20px;
+  color: black;
+}
+.text_info {
+  background-color: rgb(252, 243, 221);
+  border-radius: 8px;
+  min-width: 500px;
+  line-height: 30px;
+  height: 30px;
+  color: black;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  /* left: 20%; */
+}
+.anymore_box_imgBox {
+  position: relative;
+}
+.anymore_box_imgBox img {
+  width: 30vw;
+  border-radius: 28px;
+}
+.textarea {
+  border: 0px solid;
+  width: 60%;
+  position: absolute;
+  /* line-height: 30px; */
+  left: 15%;
+  top: 15%;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  height: 65px;
+  /* background-color: royalblue; */
+  background-color: rgba(0, 0, 0, 0);
+}
+.textarea2 {
+  border: 0px solid;
+  width: 60%;
+  position: absolute;
+  /* line-height: 30px; */
+  left: 15%;
+  top: 70%;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  height: 40px;
+  /* background-color: royalblue; */
+  background-color: rgba(0, 0, 0, 0);
+}
+.hintImg {
+  width: 30vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}

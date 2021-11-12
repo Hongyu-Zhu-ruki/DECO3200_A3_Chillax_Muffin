@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.isActive_link {
+  border-bottom: sandybrown 3px solid;
+}
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(252, 243, 221);
+}
+
+.body {
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+.back {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 2;
+}
+.back img {
+  width: 90px;
+}
+.body_left {
+  width: 55%;
+  margin: 5% 2% 0 7%;
+}
+.body_left .title {
+  font-size: 37px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  font-family: ABeeZee;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+}
+.body_left .content {
+  background: rgb(252, 243, 221)
+    url("../images/瓶子日记部分1/br.png") no-repeat center 0;
+  background-size: cover;
+  width: 50vw;
+  height: 65vh;
+  border-radius: 6%;
+  position: relative;
+}
+.img_box .img1 {
+  width: 3vw;
+}
+.img_box .img3 {
+  width: 2.1vw;
+}
+.img_box .img2 {
+  width: 2.5vw;
+}
+.img4 {
+  width: 16.4vw;
+  position: absolute;
+  top: 12%;
+  left: 10%;
+}
+.img5 {
+  width: 16.4vw;
+  position: absolute;
+  top: 55%;
+  left: 10%;
+}
+.body_left .img_box {
+  /* height: 11.1vh; */
+  width: 12vw;
+  position: absolute;
+  top: 32%;
+  left: 27%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.img6 {
+  width: 15vw;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+.body_left .color_box {
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.body_left .color_box > div {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+.body_right {
+  width: 45%;
+  position: relative;
+  font-size: 16px;
+}
+.bottle_imgBox{
+  margin-top: 80px;
+}
+.float_box {
+  position: relative;
+}
+.body_right .line {
+  border: 0px solid;
+  width: 400px;
+  position: absolute;
+  left: 18%;
+  border-bottom: 1px solid rosybrown;
+}
+
+.body_right .line4 {
+  border: 0px solid;
+  width: 200px;
+  position: absolute;
+  line-height: 30px;
+  left: 30%;
+  top: 38%;
+  font-size: 27px;
+  border-bottom: 1px solid rosybrown;
+  background-color: rgba(0, 0, 0, 0);
+}
+.body_right .textarea {
+  border: 0px solid;
+  width: 50%;
+  position: absolute;
+  line-height: 30px;
+  left: 15%;
+  top: 15%;
+  font-size: 25px;
+  border-bottom: 1px solid rosybrown;
+  height: 80px;
+  /* background-color: royalblue; */
+  background-color: rgba(0, 0, 0, 0);
+}
+.body_right .btn {
+  position: absolute;
+  left: 0;
+  transform: translateY(-70px);
+  width: 100%;
+}
+.body_right .btn a {
+  font-size: 27px;
+  background-color: rgb(255, 206, 149);
+  padding: 10px;
+  border-radius: 20px;
+}
+.body_right .btn_box {
+  position: absolute;
+  left: 12.5%;
+  top: 57%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.body_right .btn_box > div {
+  width: 70px;
+  height: 25px;
+  border-radius: 5px;
+  margin: 10px;
+  color: rgba(0, 0, 0, 0);
+  line-height: 25px;
+}
+
+.text_info {
+  background-color: rgb(252, 243, 221);
+  border-radius: 8px;
+  min-width: 350px;
+  line-height: 30px;
+  height: 30px;
+  color: black;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  /* left: 20%; */
+}

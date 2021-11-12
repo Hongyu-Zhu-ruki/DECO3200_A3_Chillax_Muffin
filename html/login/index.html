@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <style>
+        body {
+          display: flex;
+          overflow: hidden;
+        }
+
+        input {
+          width: 464px;
+          height: 6vh;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+        }
+        .r_box {
+            flex: 1;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background: url('../../images/bg_login.png') center center;
+            background-size: cover;
+        }
+
+        .r_box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .l_box {
+            position: relative;
+            flex: 1;
+            background-color: #FFF0D9;
+        }
+
+        .l_box .inner_box {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .l_box .inner_box .title {
+            font-style: italic;
+            font-size: 48px;
+            line-height: 24px;
+            min-width: 500px;
+        }
+
+        .l_box .inner_box .content {
+            position: absolute;
+            top: 100px;
+            font-family: ABeeZee;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .l_box .inner_box .form {
+            position: absolute;
+            width: 80%;
+            top: 150px;
+        }
+
+        .tab_box {
+            width: 80%;
+            border-bottom: 1.5px solid rgb(196, 196, 196);
+            height: 40px;
+            line-height: 40px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            font-weight: 600;
+            font-style: italic;
+            list-style: none;
+
+        }
+
+        ul li:nth-child(1) {
+            margin-left: -40px;
+        }
+
+        ul li:nth-child(2) {
+            margin-left: 40px;
+        }
+
+        .register_btn,
+        .login_btn {
+            background-color: rgb(255, 156, 40);
+            width: 464px;
+            height: 49px;
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        .register_fom {
+            display: block;
+        }
+
+        .login_fom {
+            display: none;
+        }
+
+        .other_info {
+            display: flex;
+            font-size: 12px;
+            line-height: 50px;
+        }
+
+        input[type=checkbox] {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            -webkit-appearance: none;
+            /* background-color: rgb(255, 156, 40); */
+            background-color: #fff;
+            border: 0;
+            outline: 0 !important;
+            padding: 0;
+            margin-top: 18px;
+            font-size: 18px;
+            line-height: 24px;
+
+        }
+
+        input[type=submit] {
+            outline: none;
+            border: none;
+            font-weight: bold;
+        }
+
+        .other_info .check {
+            display: flex;
+ 
+        }
+
+        .check strong {
+            margin-left: 10px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+
+        .active {
+            border-bottom: 1px solid rgb(255, 156, 40);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="l_box">
+        <div class="inner_box">
+            <div class="dec_box">
+                <h3 class="title">Login to Chillax</h3>
+                <p class="content">
+                    Thank you for get back to Chillax, Let's relieve your stress<br> together.
+                </p>
+            </div>
+            <div class="form">  
+                <div class="tab_box">
+                    <ul id="tab">
+                        <li class="active">Register</li>
+                        <li>Log in</li>
+                    </ul> 
+                </div>
+                <!--sign up-->
+                <form action="#" class="register_fom">
+                      <input type="text" name="username" id="username" placeholder="Name" required>
+                      <input type="email" name="email" id="email" placeholder="Email" required>
+                      <input type="password" name="password" id="password" placeholder="Password" required>
+                      <input type="password" name="re_password" id="re_password" placeholder="Password confirm" required>
+                      <input type="submit" value="REGISTER" class="register_btn">
+                </form>
+                <!--log in-->  
+                <form action="#" class="login_fom">
+                       <input type="email" name="email" id="email" placeholder="Email" required>
+                       <input type="password" name="password" id="password" placeholder="Password" required>
+                    <div class="other_info">
+                        <span class="check">
+                            <input type="checkbox" name="checkbox" id="checkbox"><strong>Remember me</strong>
+                        </span>
+                    </div>
+                     <input type="submit" value="LOGIN" class="login_btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="r_box">
+        <!-- <img src="../../images/bg_login.png" alt="登录背景图"> -->
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        let register_fom = document.querySelector('.register_fom')
+        let login_fom = document.querySelector('.login_fom')
+
+        let register_btn = document.querySelector('.register_btn')
+        let login_btn = document.querySelector('.login_btn')
+
+        let li_one = document.querySelector("li:nth-child(1)");
+        let li_tow = document.querySelector("li:nth-child(2)");
+        let checkbox = document.getElementById('checkbox')
+        console.log(checkbox);
+        li_one.addEventListener('click', () => {
+            li_one.classList.add('active')
+            li_tow.classList.remove('active')
+            register_fom.style.display = 'block'
+            login_fom.style.display = 'none'
+        })
+        li_tow.addEventListener('click', () => {
+            li_tow.classList.add('active')
+            li_one.classList.remove('active')
+            register_fom.style.display = 'none'
+            login_fom.style.display = 'block'
+        })
+        let isActive = false
+        checkbox.addEventListener('click', () => {
+          isActive = !isActive
+          if(isActive){
+            checkbox.style.backgroundColor = 'rgb(255, 156, 40)'
+          }else {
+            checkbox.style.backgroundColor = '#fff'
+          }
+        })
+        
+
+        // to Home page
+        register_btn.addEventListener('click', () => {
+            location.href='../home/home.html'
+        })
+        login_btn.addEventListener('click', () => {
+            location.href='../home/home.html'
+        })
+    }
+</script>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bottleDiary3</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../css/bottleDiary4.css">
+    <style>
+      .header {
+            width: 100%;
+            /* background-color: rgb(255, 206, 149); */
+            font-size:25px;
+            line-height: 7vh;
+            /* font-style: italic; */
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        ul,
+        ol,
+        li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+         font-family: "微软雅黑";
+          text-decoration: none;
+          color: #000;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <div class="main">
+    <header class="header">
+      <ul id="Menu">
+          <li>
+              <a href="../home/home.html">Home</a>
+          </li>
+          <li class="isActive_link">
+              <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+          </li>
+          <li>
+              <a  href="../game/game1.html">Game</a>
+          </li>
+          <li>
+              <a href="../collection/collection1.html">Collection</a>
+          </li>
+          <li>
+              <a href="../profile/profile.html">Profile</a>
+          </li>
+      </ul>
+  </header>
+    <div class="body">
+     
+      <div class="back">
+        <a href="./bottleDiary2.html">
+          <img src="../../images/瓶子日记部分1/back.png" alt="">
+        </a>
+      </div>
+      <div class="center">
+        <div class="center_left">
+          <div>
+            <h1>Check my  Stress-Bottle</h1>
+          </div>
+          <div class="main_content">
+            <div class="l_sangle"></div>
+            <div class="content">
+                <div class="img1">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子1.png" alt="">
+                </div>
+                <div class="img2">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子2.png" alt="">
+                </div>
+                <div class="img3">
+                    <img src="../../images/瓶子日记部分2&与游戏部分共用/部分2瓶子3.png" alt="">
+                </div>
+            </div>
+            <div class="r_sangle"></div>
+          </div>
+          <div class="main_footer">
+            <p>Every Stress bottle represents the Stress </p>
+            <p>diary you recorded...</p>
+          </div>
+        </div>
+        <div class="center_right">
+
+      <div class="back back2">
+        <a href="./bottleDiary2.html">
+          <img src="../../images/瓶子日记部分1/back.png" alt="">
+        </a>
+      </div>
+          <div class="star">
+            <img class="star_img" src="../../images/瓶子日记部分2&与游戏部分共用/白色星星.png" alt="">
+            <span class="star_txt">Light up the little star</span>
+            <img class="hintImg" src="../../images/瓶子日记部分2&与游戏部分共用/提示.png" alt="">
+          </div>
+          <div class="bottle">
+            <img class="bottle_img" src="../../images/瓶子日记部分2&与游戏部分共用/g1.png" alt="">
+          </div>
+          <div class="describe">
+            <img src="../../images/瓶子日记部分2&与游戏部分共用/瓶子下面的描述.png" alt="">
+          </div>
+          <div class="yellowImg_box">
+            <img src="../../images/瓶子日记部分2&与游戏部分共用/跟着黄色星星出来的描述.png" alt="">
+          </div>
+          <div class="btn_box">
+            <a href="../game/game1_2.html">Break this stress</a>
+            <p class="yellowStar">Broken! Light up the star</p>
+            <p class="anymoreBtn">I'm not stressed about this anymore!</p>
+          </div>
+          <div class="anymore_box">
+            <div class="anymore_box_imgBox">
+              <img class="anymore_box_img" src="../../images/瓶子日记部分2&与游戏部分共用/Group 6976.png" alt="">
+              <textarea class="textarea" style="overflow-y:hidden" rows="3" cols="57">
+              </textarea>
+              <div class="text_info">text</div>
+              <div class="anymore_btnBox">
+                <div style="background-color: rgb(255,115,115);">
+                  <span>one</span>
+                </div>
+                <div style="background-color: rgb(255,187,85);">
+                  <span>two</span></div>
+                <div style="background-color: rgb(255,224,114);">
+                  <span>three</span></div>
+                <div style="background-color: rgb(254,233,179);">
+                  <span>four</span></div>
+              </div>
+              <textarea class="textarea2" style="overflow-y:hidden" rows="2" cols="57"></textarea>
+            </div>
+            <!-- <input class="line line1" type="text">
+            <input class="line line2" type="text"> -->
+            
+
+            <div class="save_btn">
+              <a class="saveBtn" href="../collection/collection1.html">Save to Collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+<script>
+  let isRed = false
+  let isYellow = false
+ 
+  let describeArr = [
+    "../../images/瓶子日记部分2&与游戏部分共用/瓶子下面的描述.png",
+    "../../images/瓶子日记部分2&与游戏部分共用/图片A.png",
+    "../../images/瓶子日记部分2&与游戏部分共用/图片B.png",
+  ]
+  
+  let textarea= document.querySelector('.textarea')
+  let decList = [
+    `I saw Tony having dinner with another girl, but he told me he was at Kevin's house 
+    playing video games. He cheated me.`,
+    `Boss said if I couldn't close the deal, I wouldn't get a raise this year.`,
+    `I had a fight with Ashley, and she said she didn't want to talk to me anymore.
+`]
+
+let centerDiv = document.getElementsByClassName('center')[0]
+document.getElementsByClassName('back2')[0].onclick = function (){
+  centerDiv.style.display = 'block'
+  document.getElementsByClassName('center_right')[0].style.display = 'none'
+  return false
+}
+
+  
+  let imgs = document.getElementsByClassName('content')[0].getElementsByTagName('img')
+  for(let i = 0; i < imgs.length; i++){
+    imgs[i].onclick = function(){
+      isRed = false
+      isYellow = false
+      centerDiv.style.display = 'flex'
+      textarea.innerText = decList[i]
+      console.log( textarea.innerText)
+      document.getElementsByClassName('center_right')[0].style.display = 'block'
+      document.getElementsByClassName('star_img')[0].src = '../../images/瓶子日记部分2&与游戏部分共用/白色星星.png'
+      document.getElementsByClassName('bottle_img')[0].src = `../../images/瓶子日记部分2&与游戏部分共用/g${i + 1}.png`
+      document.getElementsByClassName('yellowImg_box')[0].style.display = 'none'
+      document.getElementsByClassName('describe')[0].style.display = ''
+      document.getElementsByClassName('describe')[0].getElementsByTagName('img')[0].src = describeArr[i]
+      document.getElementsByClassName('btn_box')[0].style.display = ''
+      document.getElementsByClassName('anymore_box')[0].style.display = 'none'
+    }
+  }
+
+  
+  document.getElementsByClassName('yellowStar')[0].onclick = function(){
+    document.getElementsByClassName('star_img')[0].src = '../../images/瓶子日记部分2&与游戏部分共用/黄色星星.png'
+    document.getElementsByClassName('yellowImg_box')[0].style.display = 'inline-block'
+  }
+
+  
+  document.getElementsByClassName('yellowImg_box')[0].onclick = function(){
+    document.getElementsByClassName('yellowImg_box')[0].style.display = 'none'
+  }
+
+  
+  let anymoreBtn = document.getElementsByClassName('anymoreBtn')[0]
+  anymoreBtn.onclick = function(){
+    document.getElementsByClassName('describe')[0].style.display = 'none'
+    document.getElementsByClassName('btn_box')[0].style.display = 'none'
+    document.getElementsByClassName('yellowImg_box')[0].style.display = 'none'
+    document.getElementsByClassName('anymore_box')[0].style.display = 'inline-block'
+    isYellow = true
+    document.getElementsByClassName('star_txt')[0].style.display = 'inline-block'
+    
+  }
+
+   
+   let Btns = document.getElementsByClassName('anymore_btnBox')[0].getElementsByTagName('div')
+  for(let i = 0; i < Btns.length; i++){
+    Btns[i].onclick = function(){
+      console.log(1);
+      for(let j = 0; j < Btns.length; j++){
+        Btns[j].style.width = '70px'
+        Btns[j].style.height = '25px'
+      }
+      Btns[i].style.width = '80px'
+      Btns[i].style.height = '30px'
+    }
+  }
+  let text_info = document.querySelector('.text_info')
+  let textArr = [
+    "Such a really bad mood that couldn't focus on anything else",
+    "In a bad mood, but can get on with daily life",
+    "A little upset, sometimes still thinking about the stress",
+    "Peace of mind, forget stress "
+  ]
+  let spans = Btns
+  for (let i = 0; i < spans.length; i++) {
+        spans[i].onmouseleave = function(){
+            
+            text_info.style.opacity = '0'  
+        }
+        spans[i].onmouseenter = function(){
+            text_info.style.opacity = '1'
+            text_info.innerHTML = textArr[i]
+        }
+        spans[i].onclick = function(){
+          for (let i = 0; i < spans.length; i++) {
+            spans[i].style.transform = "scale(1)";
+          }
+          
+            spans[i].style.transform = "scale(1.2)";
+           
+        }
+     }
+
+    
+    document.getElementsByClassName('star_img')[0].onclick = function(){
+      if(isYellow){
+        isRed = true
+        document.getElementsByClassName('star_img')[0].src = '../../images/瓶子日记部分2&与游戏部分共用/红心星星.png'
+      }
+    }
+    let hintImg = document.getElementsByClassName('hintImg')[0]
+    document.getElementsByClassName('saveBtn')[0].onclick = function(){
+      if(!isRed){
+        hintImg.style.display = 'inline-block'
+        return false
+      }
+    }
+    hintImg.onclick = function(){
+      hintImg.style.display = 'none'
+    }
+
+    
+
+</script>
+
+</html>

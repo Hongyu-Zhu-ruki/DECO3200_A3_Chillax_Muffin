@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <style>
+        body {
+            background-image: url('../../images/瓶子日记部分1/瓶子日记部分首页背景.png');
+        }
+
+        .header {
+            width: 100%;
+            line-height: 7vh;
+            /* background-color: rgb(255, 206, 149); */
+            font-size:25px;
+            /* font-style: italic; */
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .main_content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main_content .left_con {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15%;
+        }
+
+        .left_con .name {
+            font-size: 64px;
+            line-height: 76px;
+            height: 73px;
+            width: 300px;
+            border-radius: nullpx;
+            margin-left: 50px;
+
+        }
+
+        .left_con .img_icon {
+            display: tabel-cell;
+            vertical-align: middle;
+        }
+
+        .img_icon img {
+            width: 100%;
+        }
+
+        .left_con .des_info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 48px;
+            line-height: 57px;
+        }
+        .main_content .right_con {
+           flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+
+        }
+
+        .right_con .inner_box {
+            width: 50%;
+            height: 350px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+
+        .inner_box .title, .inner_box input {
+            font-style: italic;
+            font-family: ABeeZee;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 66px;
+            letter-spacing: -1.1707863807678223px;
+            text-align: center;
+        }
+        .inner_box input{
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0);
+        }
+
+        .inner_box .top_box,
+        .inner_box .bom_box {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .inner_box .btn {
+            margin: 10px 0;
+            width: 280px;
+            height: 70px;
+            width: 500px;
+            border-radius: 11px;
+            line-height: 70px;
+            background-color: rgb(255, 156, 40);
+            font-family: ABeeZee;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: 400;
+            letter-spacing: -1.1707863807678223px;
+            text-align: center;
+
+
+        }
+
+        .inner_box .btn:nth-child(2) {
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .inner_box .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <ul id="Menu">
+            <li>
+                <a href="../home/home.html">Home</a>
+            </li>
+            <li>
+                <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+            </li>
+            <li>
+                <a href="../game/game1.html">Game</a>
+            </li>
+            <li>
+                <a href="../collection/collection1.html">Collection</a>
+            </li>
+            <li  class="active">
+                <a href="../profile/profile.html">Profile</a>
+            </li>
+        </ul>
+    </header>
+    <main class="main_content">
+        <div class="left_con">
+            <div class="img_icon">
+                <img src="../../images//Home页面/头像.png" alt="头像">
+            </div>
+            <span class="name">Jonathan</span>
+            <div class="des_info">
+                <span>Usage Days:</span><strong>26 !</strong>
+            </div>
+        </div>
+        <div class="right_con">
+            <div class="inner_box">
+                <div class="top_box">
+                    <h5 class="title">User Name</h5>
+                    <div class="btn">
+                      <input type="text" value="Jonathan"> </div><br>
+                    <div class="btn center"> Profile Photo</div>
+                </div>
+                <div class="bom_box">
+                    <div class="btn center" id="account"> Switch Account</div><br />
+                    <div class="btn center" id="logout">Log out </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    
+    let account = document.getElementById('account')
+    account.addEventListener('click', () => {
+        window.location.href = '../login/index.html'
+    })
+    let logout = document.getElementById('logout')
+    logout.addEventListener('click', () => {
+        if (confirm('Log out?')) {
+            window.location.href = '../login/index.html'
+            return false
+        }
+    })
+</script>
+
+</html>

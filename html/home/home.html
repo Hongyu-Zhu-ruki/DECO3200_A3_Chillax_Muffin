@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../css/home.css">
+</head>
+<body>
+   <div class="main">
+     <div class="header">
+       <div class="header_left">
+         <img src="../../images/网页logo.png" alt="">
+       </div>
+       <div class="header_center">
+          <a class="isActive_link" href="../home/home.html">Home</a>
+          <a href="../bottleDiary/bottleDiary1.html">Bottle Diary</a>
+          <a href="../game/game1.html">Game</a>
+          <a href="../collection/collection1.html">Collection</a>
+          <!-- <a href="../profile/profile.html">Profile</a> -->
+       </div>
+       <div class="header_right">
+         <div>
+           <img src="../../images/Home页面/头像.png" alt="">
+         </div>
+         <div>
+          <h1>Jonathan</h1>
+          <h2>Usage Days: 26!</h2>
+         </div>
+       </div>
+     </div>
+     <div class="center">
+       <div class="center_left">
+        <h1>What makes you feel<br /> stressed ?</h1>
+        <p>Let us help you relieve your fell stressrd?</p>
+        <button class="btn">Talk it</button>
+       </div>
+       <div class="center_right">
+        <div class="containerBox">
+          <div class="container">
+            <div class="wrap" style="left:-500px;">
+                <img src="../../images/Home页面/Home图片5.png" alt="">
+                <img src="../../images/Home页面/Home图片1.png" alt="">
+                <img src="../../images/Home页面/Home图片2.png" alt="">
+                <img src="../../images/Home页面/Home图片3.png" alt="">
+                <img src="../../images/Home页面/Home图片4.png" alt="">
+                <img src="../../images/Home页面/Home图片5.png" alt="">
+                <img src="../../images/Home页面/Home图片1.png" alt="">
+               
+            </div>
+            <div class="buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- <a href="javascript:;" class="arrow arrow_left">&lt;</a>
+            <a href="javascript:;" class="arrow arrow_right">&gt;</a> -->
+          </div>
+        </div>
+      </div>
+     </div>
+     
+   </div>
+</body>
+<script>
+  document.getElementsByClassName('header_right')[0].onclick = function(){
+    window.location.href = '../profile/profile.html'
+  }
+
+  var wrap = document.querySelector(".wrap");
+  // var next = document.querySelector(".arrow_right");
+  // var prev = document.querySelector(".arrow_left");
+  // next.onclick = function () {
+  //     next_pic();
+  // }
+  // prev.onclick = function () {
+  //     prev_pic();
+  // }
+  function next_pic () {
+      index++;
+      if(index > 4){
+          index = 0;
+      }
+      showCurrentDot();
+      var newLeft;
+      if(wrap.style.left == "-2500px"){
+          newLeft = -500;
+      }else{
+          newLeft = parseInt(wrap.style.left)-500;
+      }
+      if(wrap.style.left === "0px"){
+          newLeft = -2500;
+      }
+      if(parseInt(wrap.style.left) >= 0){
+        newLeft = -2500
+      }
+      wrap.style.left = newLeft + "px";
+  }
+
+  function prev_pic () {
+      index--;
+      if(index < 0){
+          index = 4;
+      }
+      showCurrentDot();
+      var newLeft;
+      if(wrap.style.left === "0px"){
+          newLeft = -2500;
+      }else{
+          newLeft = parseInt(wrap.style.left)+500;
+      }
+      if(parseInt(wrap.style.left) >= 0){
+        newLeft = -2500
+      }
+
+      wrap.style.left = newLeft + "px";
+  }
+
+  var timer = null;
+  function autoPlay () {
+      timer = setInterval(function () {
+          next_pic();
+      },2000);
+  }
+  autoPlay();
+  var container = document.querySelector(".container");
+  container.onmouseenter = function () {
+      clearInterval(timer);
+  }
+  container.onmouseleave = function () {
+      autoPlay();
+  }
+  var index = 0;
+  var dots = document.getElementsByClassName('buttons')[0].getElementsByTagName("span");
+  function showCurrentDot () {
+      for(var i = 0, len = dots.length; i < len; i++){
+          dots[i].className = "";
+      }
+      dots[index].className = "on";
+  }
+
+  for (var i = 0, len = dots.length; i < len; i++){
+      (function(i){
+          dots[i].onclick = function () {
+              var dis = index - i;
+              if(parseInt(wrap.style.left) <= -3000){
+                  dis = dis + 5;
+              }
+              if(parseInt(wrap.style.left) >= 500){
+                  dis = dis - 5;
+              }
+              
+
+              if(index == 0 && parseInt(wrap.style.left)!== -500){
+                  dis = 5 + dis;
+              }
+              wrap.style.left = (parseInt(wrap.style.left) + dis * 500)+"px";
+              index = i;
+              showCurrentDot();
+          }
+      })(i);
+  }
+  let btn = document.querySelector('.btn')
+    btn.addEventListener('click', () => {
+        window.location.href = '../bottleDiary/bottleDiary1.html'
+    })
+</script>
+</html>

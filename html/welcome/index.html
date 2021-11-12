@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <style>
+        body {
+            background-color: rgb(255, 245, 221);
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .main_content {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 8%;
+        }
+
+        .container .r_box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .r_box img {
+            width: 100%;
+        }
+
+        .container .l_box {
+            flex: 1;
+            text-align: center;
+            
+        }
+
+        .container .l_box .title {
+            font-family: ABeeZee;
+            color: rgb(47, 57, 75);
+            font-style: italic;
+            font-size: 64px;
+            line-height: 80px;
+        }
+
+        .container .l_box .content {
+            color: #424040;
+            font-size: 18px;
+            line-height: 30px;
+            font-style: italic;
+        }
+
+        .container .l_box .btn {
+            width: 295.13px;
+            height: 74.09px;
+            border-radius: 24.697px;
+            left: 325px;
+            top: 634px;
+            background: #FFCE95;
+            border: none;
+            font-size: 18px;
+            margin-top: 30px;
+            font-size: 34.5758px;
+            line-height: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main_content">
+            <div class="l_box">
+                <h3 class="title">
+                    What makes you<br /> feel stressed ?
+                </h3>
+                <p class="content">
+                    Let us help you relieve your
+                    fell stressrd?
+                </p>
+                <button class="btn">Talk it</button>
+            </div>
+            <div class="r_box">
+                <img src="../../images/第二页配图.png" alt="第二页配图">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    let btn = document.querySelector('.btn')
+    btn.addEventListener('click', () => {
+        window.location.href = '../login/index.html'
+    })
+</script>
+
+</html>
